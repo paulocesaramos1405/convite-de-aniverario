@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.convite-card {
+    width: 100%;
+    max-width: 500px;
+    background-color: #222;
+    border: 5px solid #02b838;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.convite-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.convite-content {
+    padding: 25px;
+    text-align: center;
+}
+
+.convite-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.convite-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.event-details {
+    background-color: #333;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.detail-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.detail-text {
+    text-align: left;
+    flex: 1;
+    font-size: 14px;
+}
+
+.detail-link {
+    color: #02b838;
+}
+
+.confirm {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.confirmation-form {
+    margin-top: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+.form-select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 400px) {
+    .convite-content {
+        padding: 20px 15px;
+    }
+    
+    .convite-title {
+        font-size: 22px;
+    }
+    
+    .convite-text {
+        font-size: 15px;
+    }
+    
+    .event-details {
+        padding: 12px;
+    }
+}

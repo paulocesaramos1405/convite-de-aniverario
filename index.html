@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Convite do PC</title>
+</head>
+<body>
+    <body>
+        <div class="convite-card">
+            <img src="imagepc.jpeg" 
+                 alt="Convite de Aniversário" 
+                 class="convite-image">
+            
+            <div class="convite-content">
+                <h1 class="convite-title">Você está convidado!</h1>
+                <p class="convite-text">
+                    Celebre comigo o meu aniversário de 21 anos.
+                </p>
+                
+                <div class="event-details">
+                    <div class="detail-item">
+                        <span class="detail-icon">📅</span>
+                        <span class="detail-text">Quarta-feira - 14 de Maio</span>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-icon">⏰</span>
+                        <span class="detail-text">A partir das 19:00 horas</span>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-icon">📍</span>
+                        <span class="detail-text">Barney's Sul - <a href="https://www.google.com/maps/place/Barney's+Burger+Sul/@-3.7933287,-38.4808261,17z/data=!3m1!4b1!4m6!3m5!1s0x7c74588a3b8c8e9:0x58b676052821a79!8m2!3d-3.7933287!4d-38.4808261!16s%2Fg%2F11bvv59wh0?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D" class="detail-link">R. Lourival Correia Pinho, 147</a></span>
+                    </div>
+
+                    <div class="confirm">
+                        <p>Por favor confirme a sua presença abaixo:</p>
+                    </div>
+
+                    
+
+                    <form class="confirmation-form" 
+                    id="confirmacaoForm"
+                    action="https://docs.google.com/forms/d/e/1FAIpQLSdN6gHmBMCuI86jGF1tlTOrLIjUABZar2QzPKVsjaN-SAb2bA/formResponse"
+                    method="POST"
+                    target="_blank">
+                        <div class="form-group">
+                            <label for="nome" class="form-label">Nome e sobrenome:</label>
+                            <input type="text" id="nome" name="entry.2057947669" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmacao" class="form-label">Você vai comparecer?</label>
+                            <select type="text" id="confirmacao" name="entry.614500544" class="form-select" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="Sim">Sim, com certeza!</option>
+                                <option value="Talvez">Talvez (depende da agenda)</option>
+                                <option value="Não">Infelizmente não poderei</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Confirmar Presença</button>
+                    </form>
+
+                    <script src="script.js"></script>
+
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+</body>
+</html>
