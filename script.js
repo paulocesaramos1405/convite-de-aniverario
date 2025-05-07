@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const nomeAcompanhanteGroup = document.getElementById('nomeAcompanhanteGroup');
     const nomeAcompanhanteInput = document.getElementById('nomeAcompanhante');
 
-    // Mostrar/ocultar campos de acompanhante
     acompanhanteSelect.addEventListener('change', function() {
         if (this.value === 'Sim') {
             nomeAcompanhanteGroup.style.display = 'block';
@@ -13,11 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             nomeAcompanhanteGroup.style.display = 'none';
             nomeAcompanhanteInput.removeAttribute('required');
-            nomeAcompanhanteInput.value = ''; // Limpa o valor quando escondido
+            nomeAcompanhanteInput.value = '';
         }
     });
 
-    // Lógica de envio do formulário
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
@@ -28,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             const formData = new FormData(form);
             
-            // Validação adicional (opcional)
             if (acompanhanteSelect.value === 'Sim' && !nomeAcompanhanteInput.value.trim()) {
                 alert('Por favor, informe o nome do acompanhante');
                 return;
@@ -42,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             alert('✅ Confirmação enviada! Obrigado.');
             form.reset();
-            nomeAcompanhanteGroup.style.display = 'none'; // Resetar visibilidade
+            nomeAcompanhanteGroup.style.display = 'none'; 
             
         } catch (error) {
             alert('❌ Erro ao enviar. Tente novamente.');
