@@ -27,7 +27,7 @@ body {
 
 .convite-image {
     width: 100%;
-    height: 350px;
+    height: 500px;
     object-fit: cover;
     display: block;
 }

@@ -1,12 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.confirmation-form');
     const confirmacaoSelect = document.getElementById('confirmacao');
-    const acompanhantesGroup = document.getElementById('acompanhantes-group');
+    const acompanhanteSelect = document.getElementById('acompanhante');
+    const nomeAcompanhanteGroup = document.getElementById('nomeAcompanhanteGroup');
+    const nomeAcompanhanteInput = document.getElementById('nomeAcompanhante');
 
-    confirmacaoSelect.addEventListener('change', function() {
-        acompanhantesGroup.style.display = this.value === 'Sim' ? 'block' : 'none';
+    // Mostrar/ocultar campos de acompanhante
+    acompanhanteSelect.addEventListener('change', function() {
+        if (this.value === 'Sim') {
+            nomeAcompanhanteGroup.style.display = 'block';
+            nomeAcompanhanteInput.setAttribute('required', '');
+        } else {
+            nomeAcompanhanteGroup.style.display = 'none';
+            nomeAcompanhanteInput.removeAttribute('required');
+            nomeAcompanhanteInput.value = ''; // Limpa o valor quando escondido
+        }
     });
 
+    // Lógica de envio do formulário
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
@@ -16,6 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         try {
             const formData = new FormData(form);
+            
+            // Validação adicional (opcional)
+            if (acompanhanteSelect.value === 'Sim' && !nomeAcompanhanteInput.value.trim()) {
+                alert('Por favor, informe o nome do acompanhante');
+                return;
+            }
+            
             const response = await fetch(form.action, {
                 method: 'POST',
                 body: formData,
@@ -24,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             alert('✅ Confirmação enviada! Obrigado.');
             form.reset();
+            nomeAcompanhanteGroup.style.display = 'none'; // Resetar visibilidade
             
         } catch (error) {
             alert('❌ Erro ao enviar. Tente novamente.');

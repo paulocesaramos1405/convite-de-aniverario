@@ -9,7 +9,7 @@
 <body>
     <body>
         <div class="convite-card">
-            <img src="imagepc.jpeg" 
+            <img src="convite.jpeg" 
                  alt="Convite de Aniversário" 
                  class="convite-image">
             
@@ -27,7 +27,7 @@
                     
                     <div class="detail-item">
                         <span class="detail-icon">⏰</span>
-                        <span class="detail-text">A partir das 19:00 horas</span>
+                        <span class="detail-text">19:00 horas</span>
                     </div>
                     
                     <div class="detail-item">
@@ -56,9 +56,23 @@
                             <select type="text" id="confirmacao" name="entry.614500544" class="form-select" required>
                                 <option value="">Selecione uma opção</option>
                                 <option value="Sim">Sim, com certeza!</option>
-                                <option value="Talvez">Talvez (depende da agenda)</option>
                                 <option value="Não">Infelizmente não poderei</option>
                             </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="acompanhante" class="form-label">Vai levar acompanhante?</label>
+                            <select type="text" id="acompanhante" name="entry.311905264" class="form-select" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Adicione uma div wrapper ao campo do acompanhante -->
+                        <div id="nomeAcompanhanteGroup" class="form-group" style="display: none;">
+                            <label for="nomeAcompanhante" class="form-label">Nome do acompanhante:</label>
+                            <input type="text" id="nomeAcompanhante" name="entry.1901315494" class="form-input">
                         </div>
                         
                         <button type="submit" class="submit-btn">Confirmar Presença</button>
